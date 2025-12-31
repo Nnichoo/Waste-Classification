@@ -30,11 +30,11 @@ The entire pipeline runs in a single Kaggle notebook with **no manual interventi
 - **Total Images**: ~2,500 (varies slightly after cleaning)
 
 ### Preprocessing Steps
-✅ Skip files < 10 KB (likely corrupt)  
-✅ Convert all images to **RGB**  
-✅ Resize to **224×224**  
-✅ Preserve original filenames for traceability  
-✅ Reproducible split using fixed random seed (`seed=42`)
+ - Skip files < 10 KB (likely corrupt)
+ - Convert all images to **RGB**
+ - Resize to **224×224**
+ - Preserve original filenames for traceability
+ - Reproducible split using fixed random seed (`seed=42`)
 
 The cleaned dataset is saved to:
 ```
@@ -100,12 +100,12 @@ The cleaned dataset is saved to:
 
 After training, the notebook automatically generates:
 
-- ✅ **Final Test Accuracy**  
-- ✅ **Per-class Precision, Recall, F1-Score** (via `classification_report`)  
-- ✅ **Confusion Matrix Heatmap**  
-- ✅ **Training vs Validation Curves** (loss & accuracy over epochs)  
-- ✅ **Sample Training Images** (with true labels)  
-- ✅ **Top 10 Misclassified Test Images** (for qualitative error analysis)
+-  **Final Test Accuracy**  
+-  **Per-class Precision, Recall, F1-Score** (via `classification_report`)  
+-  **Confusion Matrix Heatmap**  
+-  **Training vs Validation Curves** (loss & accuracy over epochs)  
+-  **Sample Training Images** (with true labels)  
+-  **Top 10 Misclassified Test Images** (for qualitative error analysis)
 
 All plots are rendered inline using `matplotlib`.
 
@@ -123,4 +123,3 @@ All plots are rendered inline using `matplotlib`.
 4. **Paste the entire script** into a single code cell  
 5. **Run all cells**
 
-> 💡 **No additional libraries need to be installed** — everything uses Kaggle’s default environment (PyTorch, torchvision, scikit-learn, matplotlib, etc.).
